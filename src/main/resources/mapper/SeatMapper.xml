@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.youyue.mapper.SeatMapper">
+
+    <!--查询seat全部信息-->
+    <select id="querySeatList" resultType="seat">
+select *
+from t_seat
+</select>
+    <!--修改座位状态-->
+    <update id="updateSeatStatus">
+update t_seat
+set status = l
+where id=#{id}
+    </update>
+</mapper>
